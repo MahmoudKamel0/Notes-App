@@ -71,7 +71,7 @@ addItemsNotes: function addItemNotes() {
        displayItemsNotes()
        
        localStorage.setItem('notes', JSON.stringify(notesArray))
-       // deleteInputs()
+       deleteInputs()
 }
 
 addNotes: $('button.add').click(function(){
