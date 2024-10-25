@@ -1,0 +1,119 @@
+* {
+       list-style: none !important;
+       text-decoration: none !important;
+       color: #444;
+}
+
+/* start navigation section
+---------------------------------*/
+.navigation {
+       border-bottom: 1px solid #0001;
+}
+
+.navigation .logo {
+       padding: 10px 20px;
+       font-size: 25px;
+       font-weight: bold;
+       color: #fff;
+       background: #333;
+}
+.navigation button i {
+       color: #fff;
+}
+.navigation button.delete-all {
+       background: #c1121f;
+}
+
+
+
+/* start Form section
+----------------------------*/
+.form textarea {
+       min-height: 100px;
+       max-height: 200px;
+}
+
+
+/* start Notes section
+----------------------------*/
+.notes .item-note {
+       min-height: 264px;
+       width: 361.34px;
+       padding: 20px;
+       border: 1px solid #0002;
+}
+
+.notes .item-note .header button {
+       height: 30px;
+       width: 50px;
+       display: flex; 
+       align-items: center;
+       justify-content: center;
+       position: relative;
+       flex-direction: column;
+}
+
+.notes .item-note .header button:active {
+       transform: scale(0.9);
+}
+
+.notes .item-note .header button i {
+       color: #fff;
+}
+
+.notes .item-note .header button.check {
+       background: #2d6a4f;
+}
+
+.notes .item-note .header button.delete {
+       background: #c1121f;
+}
+
+.notes .item-note .header button.delete .bin-top {
+       width: 12px;
+       transform-origin: right;
+       transition-duration: 0.3s;
+       z-index: 2;
+}
+.notes .item-note .header button.delete:hover .bin-top {
+       transform: rotate(45deg);
+}
+
+.notes .item-note .header button.delete .bin-bottom {
+       width: 9px;
+       z-index: 2;
+}
+
+button.delete .garbage {
+       position: absolute;
+       width: 14px;
+       height: auto;
+       z-index: 1;
+       opacity: 0;
+       transition: all 0.3s;
+}
+button.delete:hover .garbage {
+       animation: throw 0.4s linear;
+}
+@keyframes throw {
+       from {
+              transform: translate(-400%, -700%);
+              opacity: 0;
+       }
+       to {
+              transform: translate(0%, 0%);
+              opacity: 1;
+       }
+}
+
+
+/* start Loading section
+----------------------------*/
+.loading {
+       height: 100%;
+       width: 100%;
+       top: 0;
+       left: 0;
+       z-index: 10;
+       background: #eee;
+}

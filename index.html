@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+       <!-- links style sheet css -->
+       <link rel="stylesheet" href="style sheet css/all.min.css">
+       <link rel="stylesheet" href="style sheet css/bootstrap.min.css">
+       <link rel="stylesheet" href="style sheet css/style.css">
+       
+</head>
+<body class="container">
+       <!-- start alert notes 
+       ---------------------------->
+       <!-- <div class="alert alert-success mt-3" role="alert">
+              A simple success alert—check it out!
+       </div> -->
+
+
+       <!-- start navigation notes 
+       ---------------------------->
+       <nav class="navigation | navbar justify-content-between navbar-expand-md">
+              <!-- logo website -->
+              <a class="logo" href="index.html">/ NOTES APP /</a>
+
+              <div class="buttons">
+                     <button class="delete-all | btn btn-dark rounded-5 py-2 px-5 mt-3 mt-md-0">delete all <i class="fa-solid fa-trash-can ms-2"></i></button>
+                     <button class="add | btn btn-dark rounded-5 py-2 px-5 mt-3 mt-md-0">add <i class="fa-solid fa-plus ms-2"></i></button>
+              </div>
+       </nav>
+
+
+       <!-- start form notes 
+       ---------------------------->
+       <section class="form | my-5">
+              <!-- title input -->
+              <item class="title | mb-3 d-block">
+                     <label for="title" class="form-label fw-bold">Title :</label>
+                     <input oninput="checkInvalidation(this)" type="text" class="form-control" id="title" placeholder="enter your title" required>
+                     <p class="invalid | my-1"><i class="me-2 fa-solid fa-triangle-exclamation"></i> Warning: The input must consist of 3 or more letters.</p>
+              </item>
+
+              <!-- section input -->
+              <item class="section | mb-3 d-block">
+                     <label for="section" class="form-label fw-bold">Section :</label>
+                     <input oninput="checkInvalidation(this)" list="section-option" type="text" class="form-control" id="section" placeholder="enter your title" required> 
+                     <p class="invalid | my-1"><i class="me-2 fa-solid fa-triangle-exclamation"></i> Warning: The input must consist of 3 or more letters.</p>
+                     
+                     <datalist id="section-option">
+                            <option value="home">
+                            <option value="work">
+                            <option value="expenses">
+                     </datalist>
+              </item>
+
+              <!-- textarea input -->
+              <item class="textarea | mb-3 d-block">
+                     <label for="textarea" class="form-label fw-bold">Content :</label>
+                     <textarea oninput="checkInvalidation(this)" class="form-control" id="textarea" placeholder="enter your content" required></textarea>
+                     <p class="invalid | my-1"><i class="me-2 fa-solid fa-triangle-exclamation"></i> Warning: The input must consist of 3 or more letters.</p>
+              </item>
+       </section>
+
+
+       <!-- start write notes 
+       ---------------------------->
+       <section class="notes">
+              <h1 class="text-center">Nothing Notes !</h1>
+              <notes class="items | d-flex my-5 align-items-center justify-content-center justify-content-lg-start flex-wrap gap-3">
+                     <!-- content from javascript file -->
+              </notes>                   
+       </section>
+
+
+       <!-- start loading notes 
+       ---------------------------->
+       <loading class="loading | d-flex align-items-center justify-content-center position-fixed">
+       <spinner class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+       </spinner>
+       </loading>
+
+
+
+       <!-- scripts javaScript -->
+       <script src="script js/bootstrap.bundle.min.js"></script>
+       <script src="script js/jquery-3.7.1.min.js"></script>
+       <script src="script js/script.js"></script>
+</body>
+</html>
